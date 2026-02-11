@@ -1,0 +1,17 @@
+name: SWE Agent
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: vsstech/swe-agent-action@v1
+        with:
+          goal: "Improve test coverage to 80% without changing production code"
