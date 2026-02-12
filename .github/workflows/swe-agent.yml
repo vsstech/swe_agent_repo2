@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: vsstech/swe-agent-action@v1
+      - uses: vsstech/swe-agent-action@v2
         with:
           goal: "Improve test coverage to 80% without changing production code"
         env:
